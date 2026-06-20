@@ -15,13 +15,11 @@
     --muted: rgba(244,234,255,0.7);
 }
 
-* {
-    box-sizing: border-box;
-}
+* { box-sizing: border-box; }
 
 body {
     margin: 0;
-    font-family: system-ui, Arial, sans-serif;
+    font-family: system-ui, Arial;
     background: radial-gradient(circle at top, #1a0b2e, var(--bg));
     color: var(--text);
 }
@@ -40,19 +38,16 @@ nav {
 
 .logo {
     font-weight: 700;
-    letter-spacing: 1px;
     color: var(--purple2);
 }
 
 nav a {
     color: var(--muted);
-    margin-left: 20px;
+    margin-left: 18px;
     text-decoration: none;
 }
 
-nav a:hover {
-    color: var(--text);
-}
+nav a:hover { color: white; }
 
 /* HERO */
 .hero {
@@ -62,12 +57,12 @@ nav a:hover {
 
 .hero h1 {
     font-size: 56px;
-    margin: 0;
     color: var(--purple2);
+    margin: 0;
 }
 
 .hero p {
-    max-width: 600px;
+    max-width: 650px;
     margin: 15px auto;
     color: var(--muted);
     font-size: 18px;
@@ -83,13 +78,15 @@ nav a:hover {
     font-size: 16px;
     cursor: pointer;
     transition: 0.2s;
+    text-decoration: none;
+    display: inline-block;
 }
 
 .btn:hover {
     transform: scale(1.05);
 }
 
-/* SECTION */
+/* SECTIONS */
 .section {
     padding: 60px 20px;
     max-width: 1000px;
@@ -99,32 +96,26 @@ nav a:hover {
 .section h2 {
     text-align: center;
     color: var(--purple2);
-    margin-bottom: 30px;
+    margin-bottom: 25px;
 }
 
-/* CARDS */
+/* GRID */
 .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 20px;
+    gap: 18px;
 }
 
 .card {
     background: rgba(255,255,255,0.03);
     border: 1px solid rgba(181,126,220,0.2);
     border-radius: 14px;
-    padding: 20px;
-    transition: 0.2s;
-}
-
-.card:hover {
-    transform: translateY(-5px);
-    border-color: var(--purple);
+    padding: 18px;
 }
 
 .card h3 {
-    color: var(--purple2);
     margin-top: 0;
+    color: var(--purple2);
 }
 
 /* CTA */
@@ -149,38 +140,43 @@ footer {
     <div>
         <a href="#features">Features</a>
         <a href="#about">About</a>
-        <a href="#build">Build</a>
+        <a href="shop.html">Shop</a>
     </div>
 </nav>
 
 <section class="hero">
     <h1>GeoPad</h1>
-    <p>A DIY handheld device built for learning, coding, and hardware experimentation. Designed from the ground up for makers.</p>
-    <button class="btn">Get Started</button>
+    <p>
+        A DIY handheld designed for creativity, learning, and precision gameplay.
+        Built with an open design philosophy and tuned for Geometry Dash players who want custom control experiences.
+    </p>
+
+    <a class="btn" href="shop.html">View Shop</a>
 </section>
 
 <section class="section" id="features">
     <h2>Features</h2>
+
     <div class="grid">
 
         <div class="card">
-            <h3>🧠 Open Design</h3>
-            <p>Fully modifiable hardware built for experimentation.</p>
+            <h3>🧩 Open Design</h3>
+            <p>Fully open hardware — modify, remix, and rebuild it however you want.</p>
         </div>
 
         <div class="card">
-            <h3>⚡ RP2040 Core</h3>
-            <p>Fast, cheap microcontroller ideal for custom devices.</p>
+            <h3>🎮 Geometry Dash Ready</h3>
+            <p>Designed for fast inputs, rhythm precision, and high-performance gameplay control.</p>
         </div>
 
         <div class="card">
-            <h3>🔧 Maker Friendly</h3>
-            <p>Designed for soldering, PCB design, and learning electronics.</p>
+            <h3>⚡ Ultra Responsive Input</h3>
+            <p>Low-latency button response built for timing-based games.</p>
         </div>
 
         <div class="card">
-            <h3>📟 Expandable</h3>
-            <p>Add screens, sensors, buttons, or anything you design.</p>
+            <h3>🔧 Customizable Layout</h3>
+            <p>Rearrange buttons and design your own control feel.</p>
         </div>
 
     </div>
@@ -188,18 +184,23 @@ footer {
 
 <section class="section" id="about">
     <h2>About GeoPad</h2>
+
     <div class="card">
-        GeoPad is a DIY handheld platform focused on learning electronics, PCB design, and embedded programming.
-        It’s built around the RP2040 microcontroller and designed to be fully customizable.
+        GeoPad is a custom handheld project created with a focus on precision input and open hardware design.
+        It is especially optimized for Geometry Dash players who want tighter control, better timing accuracy,
+        and a physical device that matches fast rhythm gameplay.
+        <br><br>
+        The goal is to merge hardware tinkering with gaming performance, allowing players and makers to build,
+        modify, and refine their own input experience.
     </div>
 </section>
 
 <section class="cta">
-    <h2>Ready to build yours?</h2>
-    <p style="color: rgba(244,234,255,0.7);">
-        Start designing your PCB and bring GeoPad to life.
+    <h2>Ready to get your GeoPad?</h2>
+    <p style="color: var(--muted);">
+        Visit the shop page to view the product and availability.
     </p>
-    <button class="btn">Start Building</button>
+    <a class="btn" href="shop.html">Go to Shop</a>
 </section>
 
 <footer>
