@@ -89,6 +89,48 @@ nav a:hover {
     background: transparent;
     border: 1px solid var(--purple2);
 }
+
+/* SECTIONS */
+.section {
+    max-width: 1000px;
+    margin: auto;
+    padding: 60px 20px;
+}
+
+.section h2 {
+    text-align: center;
+    color: var(--purple2);
+    margin-bottom: 25px;
+}
+
+/* FEATURES */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 18px;
+}
+
+.card {
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(181,126,220,0.2);
+    border-radius: 14px;
+    padding: 18px;
+}
+
+/* ABOUT */
+.about {
+    background: rgba(255,255,255,0.02);
+    border-radius: 14px;
+    padding: 20px;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 40px 20px;
+    color: var(--muted);
+    font-size: 13px;
+}
 </style>
 </head>
 
@@ -108,7 +150,7 @@ nav a:hover {
 
     <div class="price" id="price">Loading...</div>
 
-    <p style="max-width:600px;margin:20px auto;color:rgba(244,234,255,0.7);">
+    <p style="max-width:600px;margin:20px auto;color:var(--muted);">
         A precision DIY handheld designed for open hardware experimentation and high-performance Geometry Dash control.
     </p>
 
@@ -118,17 +160,54 @@ nav a:hover {
     </div>
 </section>
 
+<section class="section" id="features">
+    <h2>Features</h2>
+
+    <div class="grid">
+        <div class="card">
+            <h3>🧩 Open Design</h3>
+            <p>Fully open hardware you can modify, rebuild, and improve.</p>
+        </div>
+
+        <div class="card">
+            <h3>🎮 Geometry Dash Optimized</h3>
+            <p>Designed for precise timing and fast input response.</p>
+        </div>
+
+        <div class="card">
+            <h3>⚡ Low Latency Input</h3>
+            <p>Built for instant response in rhythm-based gameplay.</p>
+        </div>
+
+        <div class="card">
+            <h3>🔧 Custom Layout</h3>
+            <p>Adapt the control feel to match your playstyle.</p>
+        </div>
+    </div>
+</section>
+
+<section class="section" id="about">
+    <h2>About</h2>
+
+    <div class="about">
+        GeoPad is a DIY handheld project focused on open hardware design and precision input.
+        It is specifically designed with Geometry Dash players in mind, aiming to improve timing accuracy,
+        control consistency, and tactile response during gameplay.
+    </div>
+</section>
+
+<footer>
+    © 2026 GeoPad • Built by rnsrobotics
+</footer>
+
 <script>
 async function setPrice() {
     try {
         const res = await fetch("https://ipapi.co/json/");
         const data = await res.json();
 
-        if (data.country_code === "US") {
-            document.getElementById("price").innerText = "$30 USD";
-        } else {
-            document.getElementById("price").innerText = "$40 AUD";
-        }
+        document.getElementById("price").innerText =
+            data.country_code === "US" ? "$30 USD" : "$40 AUD";
     } catch {
         document.getElementById("price").innerText = "$40 AUD";
     }
