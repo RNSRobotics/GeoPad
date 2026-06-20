@@ -8,18 +8,15 @@
 <style>
 :root {
     --bg: #0b0710;
-    --panel: #151022;
     --purple: #7a2cff;
     --purple2: #b57edc;
     --text: #f4eaff;
     --muted: rgba(244,234,255,0.7);
 }
 
-* { box-sizing: border-box; }
-
 body {
     margin: 0;
-    font-family: system-ui, Arial;
+    font-family: system-ui;
     background: radial-gradient(circle at top, #1a0b2e, var(--bg));
     color: var(--text);
 }
@@ -30,7 +27,7 @@ nav {
     justify-content: space-between;
     align-items: center;
     padding: 18px 40px;
-    background: rgba(0,0,0,0.3);
+    background: rgba(0,0,0,0.35);
     backdrop-filter: blur(10px);
     position: sticky;
     top: 0;
@@ -52,83 +49,47 @@ nav a:hover { color: white; }
 /* HERO */
 .hero {
     text-align: center;
-    padding: 110px 20px 70px;
+    padding: 100px 20px 60px;
 }
 
 .hero h1 {
     font-size: 56px;
-    color: var(--purple2);
     margin: 0;
+    color: var(--purple2);
 }
 
-.hero p {
-    max-width: 650px;
-    margin: 15px auto;
+.price {
+    font-size: 22px;
+    margin-top: 10px;
+    color: white;
+}
+
+.small {
     color: var(--muted);
-    font-size: 18px;
+    margin-top: 5px;
 }
 
+/* BUTTONS */
 .btn {
+    display: inline-block;
     margin-top: 20px;
     padding: 12px 26px;
-    border: none;
     border-radius: 10px;
     background: linear-gradient(135deg, var(--purple), #4b00c2);
     color: white;
-    font-size: 16px;
-    cursor: pointer;
-    transition: 0.2s;
     text-decoration: none;
-    display: inline-block;
+    font-weight: 600;
+    transition: 0.2s;
 }
 
 .btn:hover {
     transform: scale(1.05);
 }
 
-/* SECTIONS */
-.section {
-    padding: 60px 20px;
-    max-width: 1000px;
-    margin: auto;
-}
-
-.section h2 {
-    text-align: center;
-    color: var(--purple2);
-    margin-bottom: 25px;
-}
-
-/* GRID */
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 18px;
-}
-
-.card {
-    background: rgba(255,255,255,0.03);
-    border: 1px solid rgba(181,126,220,0.2);
-    border-radius: 14px;
-    padding: 18px;
-}
-
-.card h3 {
-    margin-top: 0;
-    color: var(--purple2);
-}
-
-/* CTA */
-.cta {
-    text-align: center;
-    padding: 80px 20px;
-}
-
-footer {
-    text-align: center;
-    padding: 30px;
-    color: var(--muted);
-    font-size: 13px;
+.btn-secondary {
+    background: transparent;
+    border: 1px solid var(--purple2);
+    margin-left: 10px;
 }
 </style>
 </head>
@@ -146,66 +107,40 @@ footer {
 
 <section class="hero">
     <h1>GeoPad</h1>
-    <p>
-        A DIY handheld designed for creativity, learning, and precision gameplay.
-        Built with an open design philosophy and tuned for Geometry Dash players who want custom control experiences.
+
+    <div class="price" id="priceText">$40 AUD</div>
+    <div class="small" id="regionText">Loading region...</div>
+
+    <p style="color: rgba(244,234,255,0.7); max-width:600px; margin:auto;">
+        A precision DIY handheld designed for open hardware experimentation and Geometry Dash performance control.
     </p>
 
-    <a class="btn" href="shop.html">View Shop</a>
+    <a class="btn" href="shop.html">Buy Now</a>
+    <a class="btn btn-secondary" href="shop.html">View Product</a>
 </section>
 
-<section class="section" id="features">
-    <h2>Features</h2>
+<script>
+/* Simple country detection (NOT perfect, but works well enough) */
+fetch("https://ipapi.co/json/")
+.then(res => res.json())
+.then(data => {
+    const country = data.country_code;
 
-    <div class="grid">
+    const priceText = document.getElementById("priceText");
+    const regionText = document.getElementById("regionText");
 
-        <div class="card">
-            <h3>🧩 Open Design</h3>
-            <p>Fully open hardware — modify, remix, and rebuild it however you want.</p>
-        </div>
-
-        <div class="card">
-            <h3>🎮 Geometry Dash Ready</h3>
-            <p>Designed for fast inputs, rhythm precision, and high-performance gameplay control.</p>
-        </div>
-
-        <div class="card">
-            <h3>⚡ Ultra Responsive Input</h3>
-            <p>Low-latency button response built for timing-based games.</p>
-        </div>
-
-        <div class="card">
-            <h3>🔧 Customizable Layout</h3>
-            <p>Rearrange buttons and design your own control feel.</p>
-        </div>
-
-    </div>
-</section>
-
-<section class="section" id="about">
-    <h2>About GeoPad</h2>
-
-    <div class="card">
-        GeoPad is a custom handheld project created with a focus on precision input and open hardware design.
-        It is especially optimized for Geometry Dash players who want tighter control, better timing accuracy,
-        and a physical device that matches fast rhythm gameplay.
-        <br><br>
-        The goal is to merge hardware tinkering with gaming performance, allowing players and makers to build,
-        modify, and refine their own input experience.
-    </div>
-</section>
-
-<section class="cta">
-    <h2>Ready to get your GeoPad?</h2>
-    <p style="color: var(--muted);">
-        Visit the shop page to view the product and availability.
-    </p>
-    <a class="btn" href="shop.html">Go to Shop</a>
-</section>
-
-<footer>
-    © 2026 GeoPad • Built by rnsrobotics
-</footer>
+    if (country === "US") {
+        priceText.innerText = "$30 USD";
+        regionText.innerText = "Detected: United States";
+    } else {
+        priceText.innerText = "$40 AUD";
+        regionText.innerText = "Detected: Outside US (AUD pricing)";
+    }
+})
+.catch(() => {
+    document.getElementById("regionText").innerText = "Region detection unavailable";
+});
+</script>
 
 </body>
 </html>
