@@ -44,7 +44,9 @@ nav a {
     text-decoration: none;
 }
 
-nav a:hover { color: white; }
+nav a:hover {
+    color: white;
+}
 
 /* HERO */
 .hero {
@@ -61,24 +63,21 @@ nav a:hover { color: white; }
 .price {
     font-size: 22px;
     margin-top: 10px;
-    color: white;
 }
 
-.small {
-    color: var(--muted);
-    margin-top: 5px;
+.buttons {
+    margin-top: 20px;
 }
 
-/* BUTTONS */
 .btn {
     display: inline-block;
-    margin-top: 20px;
     padding: 12px 26px;
     border-radius: 10px;
     background: linear-gradient(135deg, var(--purple), #4b00c2);
     color: white;
     text-decoration: none;
     font-weight: 600;
+    margin: 5px;
     transition: 0.2s;
 }
 
@@ -86,10 +85,9 @@ nav a:hover { color: white; }
     transform: scale(1.05);
 }
 
-.btn-secondary {
+.btn-outline {
     background: transparent;
     border: 1px solid var(--purple2);
-    margin-left: 10px;
 }
 </style>
 </head>
@@ -108,38 +106,35 @@ nav a:hover { color: white; }
 <section class="hero">
     <h1>GeoPad</h1>
 
-    <div class="price" id="priceText">$40 AUD</div>
-    <div class="small" id="regionText">Loading region...</div>
+    <div class="price" id="price">Loading...</div>
 
-    <p style="color: rgba(244,234,255,0.7); max-width:600px; margin:auto;">
-        A precision DIY handheld designed for open hardware experimentation and Geometry Dash performance control.
+    <p style="max-width:600px;margin:20px auto;color:rgba(244,234,255,0.7);">
+        A precision DIY handheld designed for open hardware experimentation and high-performance Geometry Dash control.
     </p>
 
-    <a class="btn" href="shop.html">Buy Now</a>
-    <a class="btn btn-secondary" href="shop.html">View Product</a>
+    <div class="buttons">
+        <a class="btn" href="shop.html">Buy Now</a>
+        <a class="btn btn-outline" href="shop.html">View Product</a>
+    </div>
 </section>
 
 <script>
-/* Simple country detection (NOT perfect, but works well enough) */
-fetch("https://ipapi.co/json/")
-.then(res => res.json())
-.then(data => {
-    const country = data.country_code;
+async function setPrice() {
+    try {
+        const res = await fetch("https://ipapi.co/json/");
+        const data = await res.json();
 
-    const priceText = document.getElementById("priceText");
-    const regionText = document.getElementById("regionText");
-
-    if (country === "US") {
-        priceText.innerText = "$30 USD";
-        regionText.innerText = "Detected: United States";
-    } else {
-        priceText.innerText = "$40 AUD";
-        regionText.innerText = "Detected: Outside US (AUD pricing)";
+        if (data.country_code === "US") {
+            document.getElementById("price").innerText = "$30 USD";
+        } else {
+            document.getElementById("price").innerText = "$40 AUD";
+        }
+    } catch {
+        document.getElementById("price").innerText = "$40 AUD";
     }
-})
-.catch(() => {
-    document.getElementById("regionText").innerText = "Region detection unavailable";
-});
+}
+
+setPrice();
 </script>
 
 </body>
