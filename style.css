@@ -10,89 +10,126 @@
     --border: rgba(192,132,255,0.25);
 }
 
+
 * {
     box-sizing: border-box;
     scroll-behavior: smooth;
 }
 
+
 body {
+
     margin: 0;
+
     font-family: Inter, system-ui, Arial, sans-serif;
+
     background:
         radial-gradient(circle at top, #261044, transparent 40%),
         linear-gradient(180deg, var(--bg2), var(--bg));
+
     color: var(--text);
+
 }
+
 
 
 /* NAVIGATION */
 
 nav {
+
     position: sticky;
+
     top: 0;
+
     z-index: 100;
+
     display: flex;
+
     justify-content: space-between;
+
     align-items: center;
 
     padding: 18px 50px;
 
     background: rgba(7,5,13,0.65);
+
     backdrop-filter: blur(15px);
 
     border-bottom: 1px solid rgba(255,255,255,0.08);
+
 }
+
 
 .logo {
+
     font-size: 24px;
+
     font-weight: 800;
 
-    background: linear-gradient(
-        90deg,
-        var(--purple-light),
-        var(--blue)
-    );
+    background:
+        linear-gradient(
+            90deg,
+            var(--purple-light),
+            var(--blue)
+        );
 
     -webkit-background-clip: text;
+
     color: transparent;
+
 }
+
 
 
 nav a {
+
     color: var(--muted);
+
     text-decoration: none;
+
     margin-left: 25px;
+
     transition: .2s;
+
 }
 
 
 nav a:hover {
-    color: white;
+
+    color:white;
+
 }
+
 
 
 /* HERO */
 
 .hero {
 
-    min-height: 80vh;
+    min-height:80vh;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    display:flex;
 
-    text-align: center;
+    flex-direction:column;
 
-    padding: 80px 20px;
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    padding:80px 20px;
+
 }
+
 
 
 .hero h1 {
 
-    font-size: clamp(50px, 8vw, 90px);
+    font-size:clamp(50px,8vw,90px);
 
-    margin: 0;
+    margin:0;
+
 
     background:
         linear-gradient(
@@ -102,60 +139,66 @@ nav a:hover {
             var(--blue)
         );
 
-    -webkit-background-clip: text;
-    color: transparent;
+
+    -webkit-background-clip:text;
+
+    color:transparent;
 
 }
+
 
 
 .hero p {
 
-    max-width: 650px;
+    max-width:650px;
 
-    font-size: 18px;
+    font-size:18px;
 
-    color: var(--muted);
+    color:var(--muted);
 
-    line-height: 1.6;
+    line-height:1.6;
 
 }
+
 
 
 .price {
 
-    margin-top: 15px;
+    margin-top:15px;
 
-    font-size: 25px;
+    font-size:25px;
 
-    font-weight: 700;
+    font-weight:700;
 
 }
+
 
 
 /* BUTTONS */
 
 .buttons {
 
-    margin-top: 30px;
+    margin-top:30px;
 
 }
 
 
+
 .btn {
 
-    display: inline-block;
+    display:inline-block;
 
-    padding: 14px 32px;
+    padding:14px 32px;
 
-    margin: 8px;
+    margin:8px;
 
-    border-radius: 12px;
+    border-radius:12px;
 
-    text-decoration: none;
+    text-decoration:none;
 
-    font-weight: 700;
+    font-weight:700;
 
-    color: white;
+    color:white;
 
 
     background:
@@ -170,9 +213,10 @@ nav a:hover {
         0 0 25px rgba(122,44,255,.35);
 
 
-    transition: .25s;
+    transition:.25s;
 
 }
+
 
 
 .btn:hover {
@@ -184,28 +228,33 @@ nav a:hover {
 }
 
 
+
 .btn-outline {
 
-    background: transparent;
+    background:transparent;
 
-    border: 1px solid var(--purple-light);
+    border:1px solid var(--purple-light);
 
     box-shadow:none;
 
 }
 
 
+
+
+
 /* SECTIONS */
 
 .section {
 
-    max-width: 1100px;
+    max-width:1100px;
 
     margin:auto;
 
     padding:80px 20px;
 
 }
+
 
 
 .section h2 {
@@ -219,6 +268,9 @@ nav a:hover {
     color:var(--purple-light);
 
 }
+
+
+
 
 
 /* CARDS */
@@ -235,26 +287,23 @@ nav a:hover {
 }
 
 
+
 .card {
 
     background:var(--card);
 
-    border:
-
-    1px solid var(--border);
-
+    border:1px solid var(--border);
 
     padding:25px;
 
     border-radius:20px;
 
-
     backdrop-filter:blur(10px);
-
 
     transition:.3s;
 
 }
+
 
 
 .card:hover {
@@ -269,13 +318,16 @@ nav a:hover {
 }
 
 
+
+
+
 /* PRODUCT GLOW */
 
 .product-showcase {
 
-    width:280px;
+    width:320px;
 
-    height:280px;
+    height:320px;
 
     border-radius:50%;
 
@@ -283,7 +335,7 @@ nav a:hover {
     background:
     radial-gradient(
         circle,
-        rgba(122,44,255,.5),
+        rgba(122,44,255,.55),
         transparent 65%
     );
 
@@ -298,7 +350,26 @@ nav a:hover {
     animation:
     float 4s infinite ease-in-out;
 
+
+    box-shadow:
+    0 0 80px rgba(122,44,255,.25);
+
 }
+
+
+
+.keyboard-icon {
+
+    font-size:140px;
+
+    margin:0;
+
+
+    filter:
+    drop-shadow(0 0 25px rgba(122,44,255,.8));
+
+}
+
 
 
 @keyframes float {
@@ -314,8 +385,9 @@ nav a:hover {
 
 
 
-/* LIMITED SALE */
 
+
+/* LIMITED SALE */
 
 .banner {
 
@@ -326,7 +398,6 @@ nav a:hover {
     padding:25px;
 
     text-align:center;
-
 
     border-radius:20px;
 
@@ -345,8 +416,10 @@ nav a:hover {
 
 
 
-/* SHOP */
 
+
+
+/* SHOP */
 
 .shop-card {
 
@@ -369,6 +442,8 @@ nav a:hover {
 
 
 
+
+
 /* TERMS */
 
 .legal {
@@ -378,6 +453,7 @@ nav a:hover {
     margin:70px auto;
 
     padding:40px;
+
 
     background:var(--card);
 
@@ -390,6 +466,7 @@ nav a:hover {
 }
 
 
+
 .legal h1,
 .legal h2 {
 
@@ -398,8 +475,10 @@ nav a:hover {
 }
 
 
-/* FOOTER */
 
+
+
+/* FOOTER */
 
 footer {
 
@@ -415,15 +494,19 @@ footer {
 
 
 
+
+
 /* MOBILE */
 
 @media(max-width:700px){
+
 
     nav {
 
         padding:18px 20px;
 
     }
+
 
 
     nav a {
@@ -435,10 +518,30 @@ footer {
     }
 
 
+
     .section h2 {
 
         font-size:32px;
 
     }
+
+
+
+    .product-showcase {
+
+        width:240px;
+
+        height:240px;
+
+    }
+
+
+
+    .keyboard-icon {
+
+        font-size:100px;
+
+    }
+
 
 }
