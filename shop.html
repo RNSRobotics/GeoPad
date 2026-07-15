@@ -12,10 +12,14 @@
 
 <link rel="stylesheet" href="style.css">
 
+
+<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+
 </head>
 
 
 <body>
+
 
 
 <nav>
@@ -33,7 +37,12 @@ GeoPad
 
 </div>
 
+
 </nav>
+
+
+
+
 
 
 
@@ -41,16 +50,37 @@ GeoPad
 <section class="section">
 
 
+
 <div class="shop-card">
+
 
 
 <div class="product-showcase">
 
-<h2 class="keyboard-icon">
-⌨️
-</h2>
+
+<model-viewer
+
+src="geopad.glb"
+
+alt="GeoPad 3D Model"
+
+camera-controls
+
+auto-rotate
+
+shadow-intensity="1"
+
+poster="geopad-render.png">
+
+</model-viewer>
+
 
 </div>
+
+
+
+
+
 
 
 
@@ -59,18 +89,23 @@ GeoPad
 </h1>
 
 
+
 <h2>
 3-Key Geometry Dash Macropad
 </h2>
 
 
 
+
 <p>
 
-A dedicated gaming input device designed for
-fast reactions, accurate timing, and a cleaner setup.
+A precision gaming macropad designed for
+fast inputs, clean setups, and consistent gameplay.
 
 </p>
+
+
+
 
 
 
@@ -78,17 +113,23 @@ fast reactions, accurate timing, and a cleaner setup.
 
 <div class="banner">
 
+
 <h2>
 🔥 Launch Edition
 </h2>
 
+
 <p>
-First 10 customers get GeoPad at the early supporter price.
+
+First 10 customers receive GeoPad for:
+
 </p>
 
-<h3>
+
+<h2>
 $45 AUD
-</h3>
+</h2>
+
 
 </div>
 
@@ -97,25 +138,45 @@ $45 AUD
 
 
 
+
+
+<img
+
+src="geopad-front.png"
+
+class="product-image"
+
+alt="GeoPad">
+
+
+
+
+
+
+
 <h2>
-What's Included?
+What's Included
 </h2>
+
 
 
 <div class="grid">
 
 
+
 <div class="card">
 
 <h3>
-⌨️ GeoPad Device
+⌨️ GeoPad
 </h3>
 
 <p>
-A fully assembled macropad ready to connect and play.
+Fully assembled macropad ready to use.
 </p>
 
 </div>
+
+
 
 
 
@@ -126,10 +187,11 @@ A fully assembled macropad ready to connect and play.
 </h3>
 
 <p>
-Reliable connection for your computer.
+Reliable connection to your computer.
 </p>
 
 </div>
+
 
 
 
@@ -141,10 +203,11 @@ Reliable connection for your computer.
 </h3>
 
 <p>
-Fast mechanical switches designed for gaming.
+Fast and consistent gaming input.
 </p>
 
 </div>
+
 
 
 
@@ -156,14 +219,16 @@ Fast mechanical switches designed for gaming.
 </h3>
 
 <p>
-Simple instructions to get started.
+Quick instructions to get started.
 </p>
 
 </div>
 
 
-
 </div>
+
+
+
 
 
 
@@ -175,22 +240,31 @@ Specifications
 </h2>
 
 
+
+
 <div class="card">
 
 
 <p>
 
 🟣 3 Mechanical Keys<br>
+
 🟣 RP2040 Controller<br>
+
 🟣 USB-C Connection<br>
-🟣 Hot-swappable Switches<br>
-🟣 RGB Support<br>
-🟣 Custom Firmware Ready
+
+🟣 PBT Keycaps<br>
+
+🟣 RGB Lighting<br>
+
+🟣 Custom Firmware Support
 
 </p>
 
 
 </div>
+
+
 
 
 
@@ -209,21 +283,26 @@ Why GeoPad?
 
 <p>
 
-Most keyboards are designed for everything.
-GeoPad is designed specifically for precision gaming.
+Traditional keyboards are made for everything.
+
+GeoPad focuses on one goal:
+precision gaming.
 
 </p>
 
 
+
 <p>
 
-A compact layout gives you dedicated controls
-without unnecessary keys.
+A compact dedicated layout gives you
+a cleaner and more focused setup.
 
 </p>
 
 
 </div>
+
+
 
 
 
@@ -232,15 +311,19 @@ without unnecessary keys.
 
 
 <a class="btn"
+
 href="https://buy.stripe.com/test_00w14m6e6fj88K19ph43S00">
 
-Purchase GeoPad
+Buy GeoPad
 
 </a>
 
 
 
-<p style="margin-top:25px;color:var(--muted);">
+
+
+
+<p style="color:var(--muted); margin-top:25px;">
 
 🔒 Secure checkout powered by Stripe
 
@@ -248,10 +331,16 @@ Purchase GeoPad
 
 
 
+
+
 </div>
 
 
+
 </section>
+
+
+
 
 
 
@@ -271,30 +360,20 @@ FAQ
 <div class="grid">
 
 
+
 <div class="card">
 
 <h3>
 Does it work instantly?
 </h3>
 
-<p>
-Yes. Plug it in through USB-C and it works as a standard input device.
-</p>
-
-</div>
-
-
-
-
-<div class="card">
-
-<h3>
-Will software be available?
-</h3>
 
 <p>
-GeoStudio will provide advanced settings, profiles, and updates in the future.
+
+Yes. Connect it through USB-C and your PC will detect it.
+
 </p>
+
 
 </div>
 
@@ -305,12 +384,36 @@ GeoStudio will provide advanced settings, profiles, and updates in the future.
 <div class="card">
 
 <h3>
-Can I customise it?
+Do I need software?
 </h3>
 
+
 <p>
-Yes. Switches, keycaps, and settings can be customised.
+
+Basic use works instantly. Future GeoStudio features will add more control.
+
 </p>
+
+
+</div>
+
+
+
+
+
+<div class="card">
+
+<h3>
+What devices work?
+</h3>
+
+
+<p>
+
+Windows, macOS, and Linux systems are supported.
+
+</p>
+
 
 </div>
 
@@ -330,22 +433,31 @@ Yes. Switches, keycaps, and settings can be customised.
 
 <footer>
 
+
 © 2026 GeoPad
 
 <br><br>
 
+
 <a href="terms.html">
+
 Terms & Conditions
+
 </a>
+
 
 <br>
 
+
 <a href="index.html">
+
 Back Home
+
 </a>
 
 
 </footer>
+
 
 
 
