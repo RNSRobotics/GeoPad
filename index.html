@@ -8,12 +8,20 @@
 
 <title>GeoPad | Precision Gaming Macropad</title>
 
+<link rel="icon" type="image/png" href="geopad-logo.png">
+
 <link rel="stylesheet" href="style.css">
+
+
+<!-- 3D Model Viewer -->
+<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 
 </head>
 
 
+
 <body>
+
 
 
 <nav>
@@ -27,9 +35,9 @@ GeoPad
 
 <a href="#features">Features</a>
 
-<a href="#specs">Specs</a>
+<a href="#gallery">Gallery</a>
 
-<a href="#about">About</a>
+<a href="#specs">Specs</a>
 
 <a href="shop.html">Shop</a>
 
@@ -39,16 +47,38 @@ GeoPad
 
 
 
+
+
+
 <section class="hero">
+
 
 
 <div class="product-showcase">
 
-<h2 class="keyboard-icon">
-⌨️
-</h2>
+
+<model-viewer
+
+src="geopad.glb"
+
+alt="GeoPad 3D Model"
+
+camera-controls
+
+auto-rotate
+
+shadow-intensity="1"
+
+poster="geopad-render.png">
+
+
+</model-viewer>
+
+
 
 </div>
+
+
 
 
 
@@ -57,30 +87,43 @@ GeoPad
 </h1>
 
 
+
+
 <div class="price" id="price">
 Loading...
 </div>
 
 
 
+
 <p>
+
 The precision 3-key macropad built for Geometry Dash.
 Fast inputs, mechanical switches, USB-C connectivity,
 and a compact design made for competitive gameplay.
+
 </p>
+
 
 
 
 <div class="buttons">
 
+
 <a class="btn" href="shop.html">
+
 Buy GeoPad
+
 </a>
+
 
 
 <a class="btn btn-outline" href="#features">
+
 Explore
+
 </a>
+
 
 
 </div>
@@ -91,7 +134,12 @@ Explore
 
 
 
+
+
+
+
 <div class="banner">
+
 
 <h2>
 🔥 First 10 GeoPads
@@ -99,7 +147,9 @@ Explore
 
 
 <p>
-Early supporters get GeoPad for a limited launch price.
+
+Limited launch edition pricing for early supporters.
+
 </p>
 
 
@@ -109,6 +159,10 @@ $45 AUD
 
 
 </div>
+
+
+
+
 
 
 
@@ -126,31 +180,39 @@ Features
 <div class="grid">
 
 
+
 <div class="card">
 
 <h3>
-⚡ Ultra Fast Input
+⚡ Fast Response
 </h3>
 
 <p>
-Designed for quick reactions and precise timing during Geometry Dash gameplay.
+
+Designed for quick reactions and precise timing.
+
 </p>
 
 </div>
 
 
 
+
 <div class="card">
 
 <h3>
-🔧 Hot-Swappable Switches
+🎮 Geometry Dash Focused
 </h3>
 
 <p>
-Change switches without soldering. Customize your typing and clicking feel.
+
+A dedicated layout built around rhythm gameplay.
+
 </p>
 
 </div>
+
+
 
 
 
@@ -161,10 +223,14 @@ Change switches without soldering. Customize your typing and clicking feel.
 </h3>
 
 <p>
-Modern USB-C connectivity for reliable and easy setup.
+
+Modern, reliable connection to your PC.
+
 </p>
 
 </div>
+
+
 
 
 
@@ -175,7 +241,9 @@ Modern USB-C connectivity for reliable and easy setup.
 </h3>
 
 <p>
-Customisable lighting effects for your setup.
+
+Custom lighting effects for your setup.
+
 </p>
 
 </div>
@@ -186,6 +254,93 @@ Customisable lighting effects for your setup.
 
 
 </section>
+
+
+
+
+
+
+
+
+
+
+<section class="section" id="gallery">
+
+
+<h2>
+Gallery
+</h2>
+
+
+
+<div class="grid">
+
+
+<div class="card">
+
+
+<img
+
+src="geopad-front.png"
+
+class="product-image"
+
+alt="GeoPad front view">
+
+
+<h3>
+Front Design
+</h3>
+
+
+<p>
+
+Compact 3-key layout designed for gameplay.
+
+</p>
+
+
+</div>
+
+
+
+
+
+<div class="card">
+
+
+<img
+
+src="geopad-side.png"
+
+class="product-image"
+
+alt="GeoPad side view">
+
+
+<h3>
+Premium Enclosure
+</h3>
+
+
+<p>
+
+A custom-designed case built for a clean setup.
+
+</p>
+
+
+</div>
+
+
+
+</div>
+
+
+</section>
+
+
+
 
 
 
@@ -214,14 +369,38 @@ Hardware
 <p>
 
 RP2040 Controller<br>
-3 Mechanical Switches<br>
-Hot-swap sockets<br>
-PBT Keycaps
+3 Mechanical Keys<br>
+PBT Keycaps<br>
+Custom PCB
 
 </p>
 
 
 </div>
+
+
+
+
+
+<div class="card">
+
+<h3>
+Connection
+</h3>
+
+
+<p>
+
+USB-C<br>
+Low latency input<br>
+Plug and play
+
+</p>
+
+
+</div>
+
+
 
 
 
@@ -245,71 +424,13 @@ Linux
 
 
 
-<div class="card">
-
-<h3>
-Connection
-</h3>
-
-
-<p>
-
-USB-C<br>
-Low latency input<br>
-Custom firmware
-
-</p>
-
-
 </div>
-
-
-</div>
-
 
 
 </section>
 
 
 
-
-
-
-
-<section class="section" id="about">
-
-
-<h2>
-Built For Players
-</h2>
-
-
-
-<div class="card">
-
-
-<p>
-
-GeoPad was created to give Geometry Dash players
-a dedicated input device instead of relying on a
-traditional keyboard.
-
-</p>
-
-
-<p>
-
-Every GeoPad is designed, assembled, tested,
-and prepared carefully before shipping.
-
-</p>
-
-
-</div>
-
-
-
-</section>
 
 
 
@@ -324,35 +445,37 @@ GeoStudio
 </h2>
 
 
+
 <div class="card">
 
 
 <h3>
-Your GeoPad. Your Settings.
-</h3>
+Control Your GeoPad</h3>
 
 
 <p>
 
-Our future desktop software will allow:
+Future GeoStudio software will allow:
 
 </p>
 
 
 <ul>
 
-<li>Key remapping</li>
+<li>Key settings</li>
 
 <li>Firmware updates</li>
 
-<li>RGB control</li>
+<li>Profiles</li>
 
-<li>Custom profiles</li>
+<li>Advanced features</li>
 
 </ul>
 
 
+
 </div>
+
 
 
 </section>
@@ -363,13 +486,21 @@ Our future desktop software will allow:
 
 
 
+
+
+
 <footer>
 
+
 © 2026 GeoPad
+
 <br>
+
 Built by rnsrobotics
 
+
 </footer>
+
 
 
 
