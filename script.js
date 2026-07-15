@@ -1,21 +1,28 @@
-// GeoPad Website JavaScript
+// GeoPad Website Scripts
 
 
-// Dynamic price based on location
+// ------------------------------
+// Dynamic Currency Display
+// ------------------------------
+
 async function setPrice() {
 
     const price = document.getElementById("price");
+
 
     if (!price) return;
 
 
     try {
 
+
         const response = await fetch(
             "https://ipapi.co/json/"
         );
 
+
         const data = await response.json();
+
 
 
         if (data.country_code === "US") {
@@ -29,9 +36,12 @@ async function setPrice() {
         }
 
 
+
     } catch {
 
+
         price.innerText = "$45 AUD";
+
 
     }
 
@@ -42,16 +52,24 @@ setPrice();
 
 
 
-// Reveal animations when scrolling
 
-const revealElements =
-document.querySelectorAll(
-    ".card, .banner, .shop-card"
+
+
+
+
+// ------------------------------
+// Scroll Reveal Animations
+// ------------------------------
+
+
+const animatedElements = document.querySelectorAll(
+    ".card, .banner, .shop-card, .legal"
 );
 
 
-const observer =
-new IntersectionObserver(
+
+const observer = new IntersectionObserver(
+
 (entries)=>{
 
 
@@ -60,10 +78,11 @@ entries.forEach(entry=>{
 
     if(entry.isIntersecting){
 
-        entry.target.style.opacity = "1";
 
-        entry.target.style.transform =
-        "translateY(0)";
+        entry.target.classList.add(
+            "show"
+        );
+
 
     }
 
@@ -72,23 +91,23 @@ entries.forEach(entry=>{
 
 
 },
+
 {
     threshold:0.15
-});
+}
+
+);
 
 
 
-revealElements.forEach(element=>{
 
 
-    element.style.opacity="0";
-
-    element.style.transform=
-    "translateY(30px)";
+animatedElements.forEach(element=>{
 
 
-    element.style.transition=
-    "0.6s ease";
+    element.classList.add(
+        "hidden"
+    );
 
 
     observer.observe(element);
@@ -99,24 +118,82 @@ revealElements.forEach(element=>{
 
 
 
-// RGB mouse glow effect
+
+
+
+
+// ------------------------------
+// Mouse RGB Glow Effect
+// ------------------------------
+
 
 document.addEventListener(
+
 "mousemove",
-(e)=>{
+
+(event)=>{
 
 
 document.documentElement.style
 .setProperty(
+
 "--mouse-x",
-e.clientX + "px"
+
+event.clientX + "px"
+
 );
 
 
+
 document.documentElement.style
 .setProperty(
+
 "--mouse-y",
-e.clientY + "px"
+
+event.clientY + "px"
+
+);
+
+
+}
+
+);
+
+
+
+
+
+
+
+
+// ------------------------------
+// Product Image Click Zoom
+// ------------------------------
+
+
+const images =
+document.querySelectorAll(".product-image");
+
+
+
+images.forEach(image=>{
+
+
+image.addEventListener(
+
+"click",
+
+()=>{
+
+
+image.classList.toggle(
+"zoom"
+);
+
+
+}
+
+
 );
 
 
