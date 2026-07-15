@@ -1,220 +1,382 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>GeoPad</title>
 
-<style>
-:root {
-    --bg: #0b0710;
-    --purple: #7a2cff;
-    --purple2: #b57edc;
-    --text: #f4eaff;
-    --muted: rgba(244,234,255,0.7);
-}
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-body {
-    margin: 0;
-    font-family: system-ui;
-    background: radial-gradient(circle at top, #1a0b2e, var(--bg));
-    color: var(--text);
-}
+<title>GeoPad | Precision Gaming Macropad</title>
 
-/* NAV */
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 18px 40px;
-    background: rgba(0,0,0,0.35);
-    backdrop-filter: blur(10px);
-    position: sticky;
-    top: 0;
-}
+<link rel="stylesheet" href="style.css">
 
-.logo {
-    font-weight: 700;
-    color: var(--purple2);
-}
-
-nav a {
-    color: var(--muted);
-    margin-left: 18px;
-    text-decoration: none;
-}
-
-nav a:hover {
-    color: white;
-}
-
-/* HERO */
-.hero {
-    text-align: center;
-    padding: 100px 20px 60px;
-}
-
-.hero h1 {
-    font-size: 56px;
-    margin: 0;
-    color: var(--purple2);
-}
-
-.price {
-    font-size: 22px;
-    margin-top: 10px;
-}
-
-.buttons {
-    margin-top: 20px;
-}
-
-.btn {
-    display: inline-block;
-    padding: 12px 26px;
-    border-radius: 10px;
-    background: linear-gradient(135deg, var(--purple), #4b00c2);
-    color: white;
-    text-decoration: none;
-    font-weight: 600;
-    margin: 5px;
-    transition: 0.2s;
-}
-
-.btn:hover {
-    transform: scale(1.05);
-}
-
-.btn-outline {
-    background: transparent;
-    border: 1px solid var(--purple2);
-}
-
-/* SECTIONS */
-.section {
-    max-width: 1000px;
-    margin: auto;
-    padding: 60px 20px;
-}
-
-.section h2 {
-    text-align: center;
-    color: var(--purple2);
-    margin-bottom: 25px;
-}
-
-/* FEATURES */
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 18px;
-}
-
-.card {
-    background: rgba(255,255,255,0.03);
-    border: 1px solid rgba(181,126,220,0.2);
-    border-radius: 14px;
-    padding: 18px;
-}
-
-/* ABOUT */
-.about {
-    background: rgba(255,255,255,0.02);
-    border-radius: 14px;
-    padding: 20px;
-}
-
-/* FOOTER */
-footer {
-    text-align: center;
-    padding: 40px 20px;
-    color: var(--muted);
-    font-size: 13px;
-}
-</style>
 </head>
+
 
 <body>
 
+
 <nav>
-    <div class="logo">GeoPad</div>
-    <div>
-        <a href="#features">Features</a>
-        <a href="#about">About</a>
-        <a href="shop.html">Shop</a>
-    </div>
+
+<div class="logo">
+GeoPad
+</div>
+
+
+<div>
+
+<a href="#features">Features</a>
+
+<a href="#specs">Specs</a>
+
+<a href="#about">About</a>
+
+<a href="shop.html">Shop</a>
+
+</div>
+
 </nav>
 
+
+
 <section class="hero">
-    <h1>GeoPad</h1>
 
-    <div class="price" id="price">Loading...</div>
 
-    <p style="max-width:600px;margin:20px auto;color:var(--muted);">
-        A precision DIY handheld designed for open hardware experimentation and high-performance Geometry Dash control.
-    </p>
+<div class="product-showcase">
 
-    <div class="buttons">
-        <a class="btn" href="shop.html">Buy Now</a>
-        <a class="btn btn-outline" href="shop.html">View Product</a>
-    </div>
+<h2>
+⌨️
+</h2>
+
+</div>
+
+
+
+<h1>
+GeoPad
+</h1>
+
+
+<div class="price" id="price">
+Loading...
+</div>
+
+
+
+<p>
+The precision 3-key macropad built for Geometry Dash.
+Fast inputs, mechanical switches, USB-C connectivity,
+and a compact design made for competitive gameplay.
+</p>
+
+
+
+<div class="buttons">
+
+<a class="btn" href="shop.html">
+Buy GeoPad
+</a>
+
+
+<a class="btn btn-outline" href="#features">
+Explore
+</a>
+
+
+</div>
+
+
 </section>
+
+
+
+
+<div class="banner">
+
+<h2>
+🔥 First 10 GeoPads
+</h2>
+
+
+<p>
+Early supporters get GeoPad for a limited launch price.
+</p>
+
+
+<h3>
+$45 AUD
+</h3>
+
+
+</div>
+
+
+
+
 
 <section class="section" id="features">
-    <h2>Features</h2>
 
-    <div class="grid">
-        <div class="card">
-            <h3>🧩 Custom Software</h3>
-            <p>Our very own software for keybinds and more!.</p>
-        </div>
 
-        <div class="card">
-            <h3>🎮 Geometry Dash Optimized</h3>
-            <p>Designed for precise timing and fast input response.</p>
-        </div>
+<h2>
+Features
+</h2>
 
-        <div class="card">
-            <h3>⚡ Low Latency Input</h3>
-            <p>Built for instant response in rhythm-based gameplay.</p>
-        </div>
 
-        <div class="card">
-            <h3>🔧 Custom Layout</h3>
-            <p>Adapt the control feel to match your playstyle.</p>
-        </div>
-    </div>
+
+<div class="grid">
+
+
+<div class="card">
+
+<h3>
+⚡ Ultra Fast Input
+</h3>
+
+<p>
+Designed for quick reactions and precise timing during Geometry Dash gameplay.
+</p>
+
+</div>
+
+
+
+<div class="card">
+
+<h3>
+🔧 Hot-Swappable Switches
+</h3>
+
+<p>
+Change switches without soldering. Customize your typing and clicking feel.
+</p>
+
+</div>
+
+
+
+<div class="card">
+
+<h3>
+🔌 USB-C Connection
+</h3>
+
+<p>
+Modern USB-C connectivity for reliable and easy setup.
+</p>
+
+</div>
+
+
+
+<div class="card">
+
+<h3>
+🌈 RGB Lighting
+</h3>
+
+<p>
+Customisable lighting effects for your setup.
+</p>
+
+</div>
+
+
+
+</div>
+
+
 </section>
+
+
+
+
+
+
+<section class="section" id="specs">
+
+
+<h2>
+Specifications
+</h2>
+
+
+
+<div class="grid">
+
+
+<div class="card">
+
+<h3>
+Hardware
+</h3>
+
+
+<p>
+
+RP2040 Controller<br>
+3 Mechanical Switches<br>
+Hot-swap sockets<br>
+PBT Keycaps
+
+</p>
+
+
+</div>
+
+
+
+<div class="card">
+
+<h3>
+Compatibility
+</h3>
+
+
+<p>
+
+Windows<br>
+macOS<br>
+Linux
+
+</p>
+
+
+</div>
+
+
+
+<div class="card">
+
+<h3>
+Connection
+</h3>
+
+
+<p>
+
+USB-C<br>
+Low latency input<br>
+Custom firmware
+
+</p>
+
+
+</div>
+
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+
 
 <section class="section" id="about">
-    <h2>About</h2>
 
-    <div class="about">
-        GeoPad is a DIY handheld project focused on open hardware design and precision input.
-        It is specifically designed with Geometry Dash players in mind, aiming to improve timing accuracy,
-        control consistency, and tactile response during gameplay.
-    </div>
+
+<h2>
+Built For Players
+</h2>
+
+
+
+<div class="card">
+
+
+<p>
+
+GeoPad was created to give Geometry Dash players
+a dedicated input device instead of relying on a
+traditional keyboard.
+
+</p>
+
+
+<p>
+
+Every GeoPad is designed, assembled, tested,
+and prepared carefully before shipping.
+
+</p>
+
+
+</div>
+
+
+
 </section>
 
+
+
+
+
+
+<section class="section">
+
+
+<h2>
+GeoStudio
+</h2>
+
+
+<div class="card">
+
+
+<h3>
+Your GeoPad. Your Settings.
+</h3>
+
+
+<p>
+
+Our future desktop software will allow:
+
+</p>
+
+
+<ul>
+
+<li>Key remapping</li>
+
+<li>Firmware updates</li>
+
+<li>RGB control</li>
+
+<li>Custom profiles</li>
+
+</ul>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
 <footer>
-    © 2026 GeoPad • Built by rnsrobotics
+
+© 2026 GeoPad
+<br>
+Built by rnsrobotics
+
 </footer>
 
-<script>
-async function setPrice() {
-    try {
-        const res = await fetch("https://ipapi.co/json/");
-        const data = await res.json();
 
-        document.getElementById("price").innerText =
-            data.country_code === "US" ? "$30 USD" : "$40 AUD";
-    } catch {
-        document.getElementById("price").innerText = "$40 AUD";
-    }
-}
 
-setPrice();
-</script>
+
+<script src="script.js"></script>
+
 
 </body>
+
 </html>
