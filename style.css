@@ -963,3 +963,51 @@ footer {
 
 
 }
+/* ACCOUNT BUTTON */
+
+.nav-links {
+
+    display:flex;
+
+    align-items:center;
+
+}
+
+
+.account-btn {
+
+    padding:10px 22px;
+
+    border-radius:12px;
+
+    background:
+
+    linear-gradient(
+        135deg,
+        var(--purple),
+        #4200c7
+    );
+
+    color:white !important;
+
+    font-weight:700;
+
+    box-shadow:
+
+    0 0 20px rgba(122,44,255,.35);
+
+    transition:.25s;
+
+}
+
+
+
+.account-btn:hover {
+
+    transform:translateY(-3px);
+
+    box-shadow:
+
+    0 0 35px rgba(122,44,255,.6);
+
+}
