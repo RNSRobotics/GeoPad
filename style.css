@@ -64,6 +64,88 @@ body {
 
 
 
+/* LAUNCH DISCOUNT BOX */
+
+
+.launch-banner {
+
+    margin:25px auto;
+
+    width:fit-content;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:20px;
+
+
+    background:
+
+    linear-gradient(
+
+        135deg,
+
+        rgba(122,44,255,.25),
+
+        rgba(0,200,255,.15)
+
+    );
+
+
+    border:
+
+    1px solid var(--border);
+
+
+    padding:14px 28px;
+
+
+    border-radius:16px;
+
+
+    text-align:center;
+
+
+    color:white;
+
+
+    font-size:16px;
+
+
+    backdrop-filter:blur(10px);
+
+
+    box-shadow:
+
+    0 0 30px rgba(122,44,255,.25);
+
+}
+
+
+.launch-banner strong {
+
+    font-size:18px;
+
+}
+
+
+.launch-banner b {
+
+    color:var(--blue);
+
+}
+
+
+
+
+
+
+
+
+
 /* NAV */
 
 nav {
@@ -217,11 +299,42 @@ nav a:hover {
 
 
 
+
+
+/* PRICE */
+
+
 .price {
 
-    font-size:25px;
-
     font-weight:700;
+
+    margin:10px;
+
+}
+
+
+.old-price {
+
+    color:rgba(247,237,255,.45);
+
+    text-decoration:line-through;
+
+    font-size:22px;
+
+}
+
+
+.sale-price {
+
+    color:var(--purple-light);
+
+    font-size:38px;
+
+    font-weight:900;
+
+    text-shadow:
+
+    0 0 20px rgba(192,132,255,.5);
 
 }
 
@@ -392,7 +505,6 @@ model-viewer {
 
 
 
-
 /* SECTIONS */
 
 
@@ -506,8 +618,6 @@ model-viewer {
 
 
 
-
-
 /* IMAGES */
 
 
@@ -548,7 +658,7 @@ model-viewer {
 
 
 
-/* SALE BANNER */
+/* OLD SALE BANNER (kept for compatibility) */
 
 
 .banner {
@@ -590,8 +700,6 @@ model-viewer {
     1px solid var(--border);
 
 }
-
-
 
 
 
@@ -732,6 +840,20 @@ footer {
         margin-left:10px;
 
         font-size:14px;
+
+    }
+
+
+
+    .launch-banner {
+
+        margin:15px;
+
+        font-size:14px;
+
+        gap:10px;
+
+        padding:12px;
 
     }
 
