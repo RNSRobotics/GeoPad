@@ -1,29 +1,105 @@
-import { auth } from "./firebase.js";
+import { auth, db } from "./firebase.js";
+
 
 import {
+
 createUserWithEmailAndPassword
-} from "https://www.gstatic.com/firebasejs/11.0.1/firebase-auth.js";
+
+}
+
+from
+
+"https://www.gstatic.com/firebasejs/11.0.1/firebase-auth.js";
 
 
-document.getElementById("signup").onclick = () => {
 
-const email = document.getElementById("email").value;
-const password = document.getElementById("password").value;
+import {
+
+doc,
+
+setDoc
+
+}
+
+from
+
+"https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore.js";
 
 
+
+
+
+document
+.getElementById("signup")
+.onclick = async () => {
+
+
+
+const email =
+document.getElementById("email").value;
+
+
+const password =
+document.getElementById("password").value;
+
+
+
+
+
+try {
+
+
+const result = await
 createUserWithEmailAndPassword(
-    auth,
-    email,
-    password
-)
+auth,
+email,
+password
+);
 
-.then(() => {
-    alert("Account created!");
-    window.location.href = "account.html";
-})
 
-.catch((error)=>{
-    alert(error.message);
-});
+
+const user = result.user;
+
+
+
+await setDoc(
+
+doc(
+db,
+"users",
+user.uid
+),
+
+{
+
+email:user.email,
+
+marketing:true,
+
+created:new Date()
+
+}
+
+);
+
+
+
+alert("Account created!");
+
+window.location.href="account.html";
+
+
+
+}
+
+catch(error){
+
+
+alert(error.message);
+
+
+}
+
+
 
 };
