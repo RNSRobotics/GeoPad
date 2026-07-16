@@ -63,8 +63,7 @@ body {
 
 
 
-
-/* LAUNCH DISCOUNT BOX */
+/* LAUNCH OFFER BANNER */
 
 
 .launch-banner {
@@ -73,13 +72,20 @@ body {
 
     width:fit-content;
 
+    max-width:95%;
+
+
     display:flex;
 
     align-items:center;
 
     justify-content:center;
 
-    gap:20px;
+
+    gap:18px;
+
+
+    padding:14px 28px;
 
 
     background:
@@ -88,22 +94,19 @@ body {
 
         135deg,
 
-        rgba(122,44,255,.25),
+        rgba(122,44,255,.35),
 
-        rgba(0,200,255,.15)
+        rgba(0,200,255,.2)
 
     );
 
 
     border:
 
-    1px solid var(--border);
+    1px solid rgba(192,132,255,.5);
 
 
-    padding:14px 28px;
-
-
-    border-radius:16px;
+    border-radius:18px;
 
 
     text-align:center;
@@ -112,27 +115,42 @@ body {
     color:white;
 
 
-    font-size:16px;
-
-
-    backdrop-filter:blur(10px);
+    backdrop-filter:blur(15px);
 
 
     box-shadow:
 
-    0 0 30px rgba(122,44,255,.25);
+    0 0 35px rgba(122,44,255,.35);
 
 }
 
 
-.launch-banner strong {
+
+.party {
+
+    font-size:28px;
+
+}
+
+
+
+.launch-text {
+
+    line-height:1.5;
+
+}
+
+
+
+.launch-text strong {
 
     font-size:18px;
 
 }
 
 
-.launch-banner b {
+
+.launch-text b {
 
     color:var(--blue);
 
@@ -145,8 +163,8 @@ body {
 
 
 
-
 /* NAV */
+
 
 nav {
 
@@ -168,6 +186,7 @@ nav {
 
 
     background:
+
     rgba(7,5,13,.65);
 
 
@@ -175,9 +194,11 @@ nav {
 
 
     border-bottom:
+
     1px solid rgba(255,255,255,.08);
 
 }
+
 
 
 
@@ -189,10 +210,15 @@ nav {
 
 
     background:
+
     linear-gradient(
+
         90deg,
+
         var(--purple-light),
+
         var(--blue)
+
     );
 
 
@@ -201,6 +227,7 @@ nav {
     color:transparent;
 
 }
+
 
 
 
@@ -229,9 +256,6 @@ nav a:hover {
 
 
 
-
-
-
 /* HERO */
 
 
@@ -244,7 +268,9 @@ nav a:hover {
 
     flex-direction:column;
 
+
     justify-content:center;
+
 
     align-items:center;
 
@@ -261,6 +287,7 @@ nav a:hover {
 .hero h1 {
 
     font-size:
+
     clamp(50px,8vw,90px);
 
 
@@ -270,10 +297,15 @@ nav a:hover {
     background:
 
     linear-gradient(
+
         90deg,
+
         white,
+
         var(--purple-light),
+
         var(--blue)
+
     );
 
 
@@ -282,6 +314,7 @@ nav a:hover {
     color:transparent;
 
 }
+
 
 
 
@@ -301,6 +334,7 @@ nav a:hover {
 
 
 
+
 /* PRICE */
 
 
@@ -311,6 +345,7 @@ nav a:hover {
     margin:10px;
 
 }
+
 
 
 .old-price {
@@ -324,6 +359,7 @@ nav a:hover {
 }
 
 
+
 .sale-price {
 
     color:var(--purple-light);
@@ -332,21 +368,12 @@ nav a:hover {
 
     font-weight:900;
 
+
     text-shadow:
 
     0 0 20px rgba(192,132,255,.5);
 
-}
-
-
-
-
-
-
-
-
-
-/* BUTTONS */
+}/* BUTTONS */
 
 
 .btn {
@@ -376,9 +403,13 @@ nav a:hover {
     background:
 
     linear-gradient(
+
         135deg,
+
         var(--purple),
+
         #4200c7
+
     );
 
 
@@ -398,7 +429,9 @@ nav a:hover {
 .btn:hover {
 
     transform:
+
     translateY(-4px)
+
     scale(1.03);
 
 }
@@ -409,12 +442,12 @@ nav a:hover {
 
     background:transparent;
 
+
     border:
 
     1px solid var(--purple-light);
 
 }
-
 
 
 
@@ -431,6 +464,7 @@ nav a:hover {
 
     width:360px;
 
+
     height:360px;
 
 
@@ -439,19 +473,26 @@ nav a:hover {
 
     display:flex;
 
+
     justify-content:center;
+
 
     align-items:center;
 
 
 
+
     background:
+
 
     radial-gradient(
 
+
         circle,
 
+
         rgba(122,44,255,.55),
+
 
         transparent 65%
 
@@ -459,13 +500,17 @@ nav a:hover {
 
 
 
+
     box-shadow:
+
 
     0 0 90px rgba(122,44,255,.3);
 
 
 
+
     animation:
+
 
     float 4s infinite ease-in-out;
 
@@ -479,9 +524,11 @@ model-viewer {
 
     width:100%;
 
+
     height:100%;
 
 }
+
 
 
 
@@ -490,8 +537,11 @@ model-viewer {
 
     50% {
 
+
         transform:
+
         translateY(-15px);
+
 
     }
 
@@ -510,26 +560,36 @@ model-viewer {
 
 .section {
 
+
     max-width:1100px;
+
 
     margin:auto;
 
 
+
     padding:80px 20px;
+
 
 }
 
 
 
+
 .section h2 {
+
 
     text-align:center;
 
+
     font-size:40px;
+
 
     color:var(--purple-light);
 
+
     margin-bottom:45px;
+
 
 }
 
@@ -550,17 +610,25 @@ model-viewer {
     display:grid;
 
 
+
     grid-template-columns:
 
+
     repeat(
+
     auto-fit,
+
     minmax(230px,1fr)
+
     );
+
 
 
     gap:25px;
 
+
 }
+
 
 
 
@@ -569,26 +637,35 @@ model-viewer {
 
     background:
 
+
     var(--card);
+
 
 
     border:
 
+
     1px solid var(--border);
+
 
 
     padding:25px;
 
 
+
     border-radius:20px;
+
 
 
     backdrop-filter:blur(10px);
 
 
+
     transition:.3s;
 
+
 }
+
 
 
 
@@ -596,17 +673,25 @@ model-viewer {
 
 
     transform:
+
+
     translateY(-8px);
 
 
+
     border-color:
+
+
     var(--purple-light);
+
 
 
 
     box-shadow:
 
+
     0 10px 40px rgba(122,44,255,.2);
+
 
 }
 
@@ -640,75 +725,17 @@ model-viewer {
 
 
 
+
 .product-image:hover {
 
 
     transform:
 
+
     scale(1.05);
 
 
 }
-
-
-
-
-
-
-
-
-
-/* OLD SALE BANNER (kept for compatibility) */
-
-
-.banner {
-
-
-    max-width:900px;
-
-
-    margin:50px auto;
-
-
-    padding:25px;
-
-
-    text-align:center;
-
-
-    border-radius:20px;
-
-
-
-    background:
-
-
-    linear-gradient(
-
-        135deg,
-
-        rgba(122,44,255,.2),
-
-        rgba(0,200,255,.15)
-
-    );
-
-
-
-    border:
-
-    1px solid var(--border);
-
-}
-
-
-
-
-
-
-
-
-
 /* SHOP */
 
 
@@ -721,24 +748,30 @@ model-viewer {
     margin:80px auto;
 
 
+
     padding:35px;
+
 
 
     background:var(--card);
 
 
+
     border-radius:25px;
+
 
 
     border:
 
+
     1px solid var(--border);
+
 
 
     text-align:center;
 
-}
 
+}
 
 
 
@@ -759,24 +792,30 @@ model-viewer {
     margin:70px auto;
 
 
+
     padding:40px;
+
 
 
     background:var(--card);
 
 
+
     border-radius:20px;
+
 
 
     border:
 
+
     1px solid var(--border);
+
 
 
     line-height:1.7;
 
-}
 
+}
 
 
 
@@ -785,7 +824,9 @@ model-viewer {
 
 .legal h2 {
 
+
     color:var(--purple-light);
+
 
 }
 
@@ -806,7 +847,9 @@ footer {
     text-align:center;
 
 
+
     padding:40px;
+
 
 
     color:var(--muted);
@@ -828,49 +871,93 @@ footer {
 @media(max-width:700px){
 
 
+
     nav {
+
 
         padding:18px 20px;
 
+
     }
+
+
 
 
     nav a {
 
+
         margin-left:10px;
+
 
         font-size:14px;
 
+
     }
+
 
 
 
     .launch-banner {
 
+
         margin:15px;
 
-        font-size:14px;
-
-        gap:10px;
 
         padding:12px;
 
+
+        gap:10px;
+
+
+        font-size:14px;
+
+
     }
+
+
+
+
+    .party {
+
+
+        font-size:22px;
+
+
+    }
+
 
 
 
     .product-showcase {
 
+
         width:250px;
 
+
         height:250px;
+
 
     }
 
 
+
+
     .section h2 {
 
+
         font-size:32px;
+
+
+    }
+
+
+
+
+    .sale-price {
+
+
+        font-size:32px;
+
 
     }
 
