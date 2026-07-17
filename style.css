@@ -400,7 +400,6 @@ nav a:hover {
 }
 
 
-
 /* PRICE */
 
 
@@ -645,6 +644,7 @@ model-viewer {
 
 
 
+
 /* SECTIONS */
 
 
@@ -824,159 +824,7 @@ model-viewer {
 
 
 
-
-/* GEOPAD VS SAYODEVICE */
-
-
-.comparison-section {
-
-
-    text-align:center;
-
-
-}
-
-
-
-.comparison-intro {
-
-
-    color:var(--muted);
-
-
-    max-width:650px;
-
-
-    margin:
-
-    -25px auto 45px;
-
-
-    font-size:18px;
-
-
-}
-
-
-
-.comparison-table {
-
-
-    display:grid;
-
-
-    grid-template-columns:
-
-
-    repeat(
-
-        auto-fit,
-
-        minmax(300px,1fr)
-
-    );
-
-
-    gap:30px;
-
-
-}
-
-
-
-.comparison-card {
-
-
-    background:
-
-
-    linear-gradient(
-
-        145deg,
-
-        rgba(255,255,255,.08),
-
-        rgba(255,255,255,.03)
-
-    );
-
-
-    border:
-
-
-    1px solid var(--border);
-
-
-    padding:30px;
-
-
-    border-radius:25px;
-
-
-    backdrop-filter:blur(15px);
-
-
-    text-align:left;
-
-
-}
-
-
-
-.comparison-card h3 {
-
-
-    text-align:center;
-
-
-    color:var(--purple-light);
-
-
-    font-size:25px;
-
-
-}
-
-
-
-.comparison-card ul {
-
-
-    list-style:none;
-
-
-    padding:0;
-
-
-}
-
-
-
-.comparison-card li {
-
-
-    padding:12px 0;
-
-
-    color:var(--muted);
-
-
-    border-bottom:
-
-
-    1px solid rgba(255,255,255,.08);
-
-
-}
-
-
-.comparison-card li:last-child {
-
-
-    border-bottom:none;
-
-
-}/* PRODUCT IMAGES */
+/* PRODUCT IMAGES */
 
 
 .product-image {
@@ -1008,6 +856,7 @@ model-viewer {
 
 
 }
+
 
 
 
@@ -1075,15 +924,7 @@ hr {
     margin:35px 0;
 
 
-}
-
-
-
-
-
-
-
-/* SHOP PAGE */
+}/* SHOP PAGE */
 
 
 .shop-card {
@@ -1378,7 +1219,6 @@ label {
 
 
 
-
 /* FOOTER */
 
 
@@ -1627,26 +1467,6 @@ footer {
 
 
     .card {
-
-
-        padding:22px;
-
-
-    }
-
-
-
-    .comparison-table {
-
-
-        grid-template-columns:1fr;
-
-
-    }
-
-
-
-    .comparison-card {
 
 
         padding:22px;
